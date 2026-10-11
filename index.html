@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">LearnHub</a>
+
+    <button id="menuToggle" class="menu-toggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="navigation" class="navigation">
+      <a href="#home">Home</a>
+      <a href="#tasks">Tasks</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle" class="theme-btn">
+        🌙 Dark Mode
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <p class="eyebrow">WEEK 3 INTERNSHIP PROJECT</p>
+      <h1>Welcome to LearnHub</h1>
+      <p>Learn, track your tasks, and improve your skills every day.</p>
+      <a href="#tasks" class="primary-btn">Explore Tasks</a>
+    </section>
+
+    <section id="tasks" class="section">
+      <h2>My Learning Tasks</h2>
+      <p>Click a button to update your task progress.</p>
+
+      <div class="task-grid">
+        <article class="task-card">
+          <h3>HTML Fundamentals</h3>
+          <p>Practice webpage structure and semantic elements.</p>
+          <button class="complete-btn">Mark Complete</button>
+          <p class="task-status" aria-live="polite">Status: Pending</p>
+        </article>
+
+        <article class="task-card">
+          <h3>CSS Styling</h3>
+          <p>Practice responsive layouts and modern styling.</p>
+          <button class="complete-btn">Mark Complete</button>
+          <p class="task-status" aria-live="polite">Status: Pending</p>
+        </article>
+
+        <article class="task-card">
+          <h3>JavaScript Basics</h3>
+          <p>Learn events, functions, and DOM manipulation.</p>
+          <button class="complete-btn">Mark Complete</button>
+          <p class="task-status" aria-live="polite">Status: Pending</p>
+        </article>
+      </div>
+
+      <div class="progress-panel">
+        <p id="progressText" aria-live="polite">Completed: 0 of 3 tasks</p>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <h2>Contact Us</h2>
+      <p>Send a message using the form below.</p>
+
+      <form id="contactForm" novalidate>
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text"
+          placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email"
+          placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"
+          placeholder="Write your message" required></textarea>
+
+        <button type="submit" class="primary-btn">Submit Message</button>
+        <p id="formFeedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 LearnHub | Week 3 JavaScript Internship Task</p>
+  </footer>
+</body>
+</html>
